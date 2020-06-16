@@ -1,5 +1,5 @@
 module.exports = (data, minTop, maxTop, minBottom, maxBottom, direction, callback) => {
-    let min = 0, shouldBreak = false;
+    let min = -1, shouldBreak = false;
 
     const condition = (i) => {
         if (direction > 0)  return i < maxTop;

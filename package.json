@@ -4,7 +4,7 @@
   "description": "Automated tool for crop images",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha tests/test* "
   },
   "repository": {
     "type": "git",
@@ -15,10 +15,20 @@
   "bugs": {
     "url": "https://github.com/mariowix/imageCropper/issues"
   },
+  "bin": {
+    "imagecropper": "bin/imagecropper.js"
+  },
   "homepage": "https://github.com/mariowix/imageCropper#readme",
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-fs": "^2.0.0",
     "path": "^0.12.7",
     "sharp": "^0.25.4",
     "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
   }
 }
