@@ -1,6 +1,7 @@
 const sharp = require("sharp");
-const path = require("path")
-const processMin = require('.\\processMin');
+const path = require("path");
+const args = require("yargs").argv;
+const processMin = require('./processMin');
 
 const processFile = async (fileName) => {
     try {
@@ -32,7 +33,7 @@ const processFile = async (fileName) => {
         await sharp(fileName)
         .extract({ left: minLeft, top: minTop, width: minRigth - minLeft, height: minBottom - minTop })
         .png()
-        .toFile('min.'+path.basename(fileName));
+        .toFile(args.output || 'min.'+path.basename(fileName));
 
     } catch (err) {
         console.log(err);
@@ -40,4 +41,4 @@ const processFile = async (fileName) => {
     }
 }
 
-processFile(process.argv[2]);
+processFile(args.filename);
