@@ -9,7 +9,7 @@ Given an image it removes all empty pixels arround the pixels that are not. This
 
 First install by running
 
-    $ npm i -g @mix/imagecropper
+    $ npm i -g @mariomixtega/imagecropper
     
 The you can simply run
 
