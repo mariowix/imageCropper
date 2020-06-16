@@ -1,0 +1,23 @@
+{
+  "name": "imagecropper",
+  "version": "1.0.0",
+  "description": "Automated tool for crop images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariowix/imageCropper.git"
+  },
+  "author": "Mario Mixtega <mariomixtega@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariowix/imageCropper/issues"
+  },
+  "homepage": "https://github.com/mariowix/imageCropper#readme",
+  "dependencies": {
+    "path": "^0.12.7",
+    "sharp": "^0.25.4"
+  }
+}
